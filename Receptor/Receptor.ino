@@ -7,6 +7,8 @@ char ch = 0;
 String msg = "";
 
 void setup(){
+  //pinMode(7, OUTPUT); 
+  //digitalWrite(7, HIGH); //O pino en (enable) deve estar em nivel alto
   Serial.begin(9600);
   gps.begin(9600);
 }
@@ -17,7 +19,7 @@ void loop(){
     msg += ch;
     if(ch == 10){
       if(msg.indexOf("GGA,", 2) == 3){
-        Serial.print(msg);
+        //Serial.print(msg);
         decodifica(msg);
       }
       msg = "";
