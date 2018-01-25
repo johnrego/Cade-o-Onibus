@@ -1,0 +1,5 @@
+A Google Maps Geocoding API é um serviço que oferece geocodificação e geocodificação reversa de endereços.
+https://developers.google.com/maps/documentation/geocoding/start
+
+A Google Maps Distance Matrix API é um serviço que fornece a distância e o tempo de percurso para uma matriz de origens e destinos, de acordo com a rota recomendada entre os pontos de partida e chegada.
+https://developers.google.com/maps/documentation/distance-matrix/start
