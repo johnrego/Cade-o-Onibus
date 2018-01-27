@@ -1,5 +1,4 @@
 #include "SoftwareSerial.h"
-#include "math.h"
     
 // Cria uma serial nas portas 2 (RX) e 3 (TX)
 SoftwareSerial gps(2 , 3);
