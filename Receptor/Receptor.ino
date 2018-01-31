@@ -2,12 +2,14 @@
     
 // Cria uma serial nas portas 2 (RX) e 3 (TX)
 SoftwareSerial gps(2 , 3);
-char ch = 0;
+char ch;
 String msg = "";
+int rssi;
 
 void setup(){
   //pinMode(7, OUTPUT); 
   //digitalWrite(7, HIGH); //O pino en (enable) deve estar em nivel alto
+  pinMode(9, INPUT); //Pino de leitura do RSSI PWM
   Serial.begin(9600);
   gps.begin(9600);
 }
@@ -19,7 +21,9 @@ void loop(){
     if(ch == 10){
       if(msg.indexOf("GGA,", 2) == 3){
         //Serial.print(msg);
-        decodifica(msg); //latitude;longitude;numero de satelite
+        decodifica(msg); //latitude;longitude;numero de satelite;potencia de recepção
+        rssi = pulseIn(9, LOW, 200);
+        Serial.println(((rssi+5928)/41)*(-1));
       }
       msg = "";
     }
@@ -63,12 +67,7 @@ void decodifica(String line){
     Serial.print(lon, 5); 
   }
   Serial.print(';');
-  Serial.println(line.substring(46, 48).toInt());
-  /*
-  //Medindo distancia até a UFERSA (-6.1066548,-38.1840574). Distancia = 3540
-  double dist = ((acos(cos((90-lat)*M_PI/180)*cos((90-(-6.1066548))*M_PI/180)+sin((90-lat)*M_PI/180)*sin((90-(-6.1066548))*M_PI/180)*cos(fabs(((360+lon)*M_PI/180)-((360+(-38.1840574))*M_PI/180)))))*6371.004)*1000;
-  Serial.print("Distancia ate a UFERSA: ");
-  Serial.println(dist, 2);
-  */
+  Serial.print(line.substring(46, 48).toInt());
+  Serial.print(';');
 }
 
