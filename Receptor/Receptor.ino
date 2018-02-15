@@ -23,7 +23,7 @@ void loop(){
         //Serial.print(msg);
         decodifica(msg); //latitude;longitude;numero de satelite;potencia de recepção
         rssi = pulseIn(9, LOW, 200);
-        Serial.println(((rssi+5928)/41)*(-1));
+        Serial.println(rssi*(-1));
       }
       msg = "";
     }
