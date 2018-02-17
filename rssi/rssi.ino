@@ -5,9 +5,13 @@
 SoftwareSerial gps(2 , 3);
 
 char ch;
+boolean mode;
+unsigned int pwm;
 void setup(){
   Serial.begin(9600);
   gps.begin(9600);
+  pinMode(6, INPUT);
+  mode = false;
 }
 
 void loop(){
@@ -27,28 +31,43 @@ void loop(){
     delay(2);
     ch = Serial.read();    
     if(ch == 'a'){
-      amostra(50); //imprime média;devio padrão
+      if(!mode){
+        gps.print("+++");
+        delay(1200); 
+      }
+      amostra(1);
+      pwm = pulseIn(6, HIGH, 200);
+      Serial.println(pwm);
+    }
+    if(ch == 'b'){
+      mode = !mode;
     }
   }
   if(gps.available()){
     ch = gps.read();
   }
+  if(mode){
+    gps.println("AT");
+    delay(30);
+    descarta();
+  }
 }
 
 void amostra(int qnt){
   char dbm[2];
-  int parcial[qnt], media, var;
-  gps.print("+++");
-  delay(1500);
+  unsigned int parcial[qnt];
   descarta();
   for(int i=0;i<qnt;i++){
     parcial[i] = 1;
     gps.println("ATDB");
-    delay(50);
+    delay(25);
     if(gps.available()){
       for(int j=0;j<2;j++){
         dbm[j] = gps.read();
         switch(dbm[j]){
+          case '0':
+            parcial[i] += 0;
+          break;
           case '1':
             parcial[i] += pow(16, abs(j-1));
           break;
@@ -95,34 +114,21 @@ void amostra(int qnt){
             parcial[i] += 15*pow(16, abs(j-1));
           break;
           default:
-            dbm[0] = '0';
-            dbm[1] = '0';
+            //dbm[0] = '0';
+            //dbm[1] = '0';
             parcial[i] = 0;
           break;                  
         }
       }
       descarta();
-      /*
-      Serial.print(parcial[i]);
-      Serial.print(';');
       for(int k=0;k<2;k++){
         Serial.print(dbm[k]);
       }
-      Serial.println();
-      */
+      Serial.print(';');
+      Serial.print(parcial[i]);
+      Serial.print(';');
     }    
   }
-  media = 0;
-  for(int i=0;i<qnt;i++){
-    media += parcial[i]/qnt;
-  }
-  Serial.print(media);
-  Serial.print(';');
-  for(int i=0;i<qnt;i++){
-    var += pow(parcial[i]-media,2)/(qnt-1);
-  } 
-  Serial.print(sqrt(var));
-  Serial.println();
 }
 
 void descarta(){

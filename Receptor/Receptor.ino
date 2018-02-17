@@ -4,12 +4,10 @@
 SoftwareSerial gps(2 , 3);
 char ch;
 String msg = "";
-int rssi;
 
 void setup(){
   //pinMode(7, OUTPUT); 
   //digitalWrite(7, HIGH); //O pino en (enable) deve estar em nivel alto
-  pinMode(9, INPUT); //Pino de leitura do RSSI PWM
   Serial.begin(9600);
   gps.begin(9600);
 }
@@ -21,9 +19,8 @@ void loop(){
     if(ch == 10){
       if(msg.indexOf("GGA,", 2) == 3){
         //Serial.print(msg);
-        decodifica(msg); //latitude;longitude;numero de satelite;potencia de recepção
-        rssi = pulseIn(9, LOW, 200);
-        Serial.println(rssi*(-1));
+        decodifica(msg); //latitude;longitude;numero de satelite
+        Serial.println();
       }
       msg = "";
     }
@@ -68,6 +65,5 @@ void decodifica(String line){
   }
   Serial.print(';');
   Serial.print(line.substring(46, 48).toInt());
-  Serial.print(';');
 }
 
