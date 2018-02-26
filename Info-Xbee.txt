@@ -1,3 +1,0 @@
-http://labdegaragem.com/profiles/blogs/tutorial-como-utilizar-o-xbee
-Depois de 10 segundos o modulo sai do modo de comando AT.
-Potência de transmissão: 3.1mW (+5dBm)
