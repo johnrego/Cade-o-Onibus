@@ -1,0 +1,250 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "BR-226",
+               "short_name" : "BR-226",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Pau dos Ferros",
+               "short_name" : "Pau dos Ferros",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Rio Grande do Norte",
+               "short_name" : "RN",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "59900-000",
+               "short_name" : "59900-000",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "BR-226, Pau dos Ferros - RN, 59900-000, Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.1065207,
+                  "lng" : -38.1839924
+               },
+               "southwest" : {
+                  "lat" : -6.1065445,
+                  "lng" : -38.1840848
+               }
+            },
+            "location" : {
+               "lat" : -6.1065326,
+               "lng" : -38.1840386
+            },
+            "location_type" : "GEOMETRIC_CENTER",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.105183619708498,
+                  "lng" : -38.1826896197085
+               },
+               "southwest" : {
+                  "lat" : -6.107881580291503,
+                  "lng" : -38.1853875802915
+               }
+            }
+         },
+         "place_id" : "ChIJ92L1ZfsyuwcRrfpzH0mtcIY",
+         "types" : [ "route" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Pau dos Ferros",
+               "short_name" : "Pau dos Ferros",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Rio Grande do Norte",
+               "short_name" : "RN",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Pau dos Ferros - RN, Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.0102725,
+                  "lng" : -38.0416543
+               },
+               "southwest" : {
+                  "lat" : -6.1957361,
+                  "lng" : -38.2749081
+               }
+            },
+            "location" : {
+               "lat" : -6.112331699999999,
+               "lng" : -38.2052013
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.0102725,
+                  "lng" : -38.0416543
+               },
+               "southwest" : {
+                  "lat" : -6.1957361,
+                  "lng" : -38.2749081
+               }
+            }
+         },
+         "place_id" : "ChIJB2b2kgwzuwcR_9_kd6pixhE",
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "59900-000",
+               "short_name" : "59900-000",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Pau dos Ferros",
+               "short_name" : "Pau dos Ferros",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Rio Grande do Norte",
+               "short_name" : "RN",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Pau dos Ferros - RN, 59900-000, Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -5.9943189,
+                  "lng" : -38.0439198
+               },
+               "southwest" : {
+                  "lat" : -6.2180813,
+                  "lng" : -38.2757024
+               }
+            },
+            "location" : {
+               "lat" : -6.117804,
+               "lng" : -38.1688559
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -5.9943189,
+                  "lng" : -38.0439198
+               },
+               "southwest" : {
+                  "lat" : -6.2180813,
+                  "lng" : -38.2757024
+               }
+            }
+         },
+         "place_id" : "ChIJ6xrXOY8yuwcRuQaPyE7lepM",
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Rio Grande do Norte",
+               "short_name" : "RN",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Rio Grande do Norte, Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -3.8299541,
+                  "lng" : -33.7737869
+               },
+               "southwest" : {
+                  "lat" : -6.9827372,
+                  "lng" : -38.5821039
+               }
+            },
+            "location" : {
+               "lat" : -5.402580299999999,
+               "lng" : -36.954107
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -3.8299541,
+                  "lng" : -33.7737869
+               },
+               "southwest" : {
+                  "lat" : -6.9827372,
+                  "lng" : -38.5821039
+               }
+            }
+         },
+         "place_id" : "ChIJreroSfVNsAcRxJ5NHKwJJak",
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 5.2717863,
+                  "lng" : -28.650543
+               },
+               "southwest" : {
+                  "lat" : -34.0891,
+                  "lng" : -73.982817
+               }
+            },
+            "location" : {
+               "lat" : -14.235004,
+               "lng" : -51.92528
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 5.2717863,
+                  "lng" : -28.650543
+               },
+               "southwest" : {
+                  "lat" : -34.0891,
+                  "lng" : -73.982817
+               }
+            }
+         },
+         "place_id" : "ChIJzyjM68dZnAARYz4p8gYVWik",
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

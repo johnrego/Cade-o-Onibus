@@ -1,0 +1,24 @@
+{
+   "destination_addresses" : [ "BR-226, Pau dos Ferros - RN, 59900-000, Brasil" ],
+   "origin_addresses" : [
+      "R. Hermógenes São do Rêgo, 570 - Princesinha, Pau dos Ferros - RN, 59900-000, Brasil"
+   ],
+   "rows" : [
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "5,0 km",
+                  "value" : 4997
+               },
+               "duration" : {
+                  "text" : "13 minutos",
+                  "value" : 790
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

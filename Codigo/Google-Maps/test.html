@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Object from JSON String</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$.getJSON('paradas.json', function(dados){
+		    for(var i=0; i<dados.length; i++) {
+		        $(document.body).append('<div>' + dados[i].nome + '</div>');
+		    }
+		});
+	</script>
+</body>
+</html>

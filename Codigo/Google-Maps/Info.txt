@@ -1,0 +1,8 @@
+Distance Matrix API
+Chave da API: AIzaSyDT3Y8yZO03B-sAnrolBobK28iMDPDNnbs
+
+Geocoding API
+Chave da API: AIzaSyCkhdzwJk96Q19VrfDHwQYH19KQTFzP7oA
+
+Maps JavaScript API
+Chave da API: AIzaSyD4iZPFR9zzOhTUidM8FoIbLfwCkmqMoag

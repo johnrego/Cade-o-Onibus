@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Google Maps API v3: Criando um mapa personalizado</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4iZPFR9zzOhTUidM8FoIbLfwCkmqMoag"></script>
+</head>
+<body onload="setTimeout('atualiza()', 10000)">
+	<center>
+	<div id="mapa" style="width: 1280px; height: 650px;">
+		Carregando, aguarde...
+	</div>
+	<script type="text/javascript">
+		var divMapa = document.getElementById('mapa');
+		var gMapa;
+		function inicializa(){
+			$.getJSON('json/onibus.json', function(dados){
+				var objConfig = {
+					zoom: 18,
+					center: new google.maps.LatLng(dados[0].lat, dados[0].lon)
+				};
+				gMapa = new google.maps.Map(divMapa, objConfig)
+			});
+		}
+		function mostraOnibus(){
+			var objConfig;
+			var gMaker;
+			$.getJSON('json/onibus.json', function(dados){
+		        objConfig = {
+					position: new google.maps.LatLng(dados[0].lat, dados[0].lon),
+	                title: dados[0].nome,
+	                map: gMapa,
+	                icon: 'img/onibus.png'
+				};
+				gMaker = new google.maps.Marker(objConfig);
+			});
+		}
+		function mostraParada(){
+			var objConfig;
+			var gMaker;
+			$.getJSON('json/paradas.json', function(dados){
+			    for(var i=0; i<dados.length; i++){
+			        objConfig = {
+						position: new google.maps.LatLng(dados[i].lat, dados[i].lon),
+		                title: dados[i].nome,
+		                map: gMapa,
+		                icon: 'img/parada.png'
+					};
+					gMaker = new google.maps.Marker(objConfig);
+			    }
+			});
+		}
+		function mostraTrajetoria(){
+			var objConfig;
+			var gMaker;
+			$.getJSON('json/trajetoria.json', function(dados){
+			    for(var i=0; i<dados.length; i++){
+			        objConfig = {
+						position: new google.maps.LatLng(dados[i].lat, dados[i].lon),
+		                title: dados[i].nome,
+		                map: gMapa,
+		                icon: 'img/ponto.png'
+					};
+					gMaker = new google.maps.Marker(objConfig);
+			    }
+			});
+		}
+		function funcao1(){
+			alert("Eu sou um alert!");
+		}
+		function atualiza(){
+			//funcao1();
+			window.location.reload();
+		}
+		inicializa();
+		mostraParada();
+		mostraOnibus();
+		mostraTrajetoria();
+		
+	</script>
+	</center>
+</body>
+</html>
